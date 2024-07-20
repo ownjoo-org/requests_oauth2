@@ -9,12 +9,12 @@ from requests_oauthlib import OAuth2Session
 
 import http.client
 
-http.client.HTTPConnection.debuglevel = 1
-
+log_level: int = logging.ERROR
+http.client.HTTPConnection.debuglevel = log_level
 logging.basicConfig()
-# logging.getLogger().setLevel(logging.DEBUG)
+logging.getLogger().setLevel(log_level)
 requests_log = logging.getLogger("requests.packages.urllib3")
-# requests_log.setLevel(logging.DEBUG)
+requests_log.setLevel(log_level)
 requests_log.propagate = True
 
 
