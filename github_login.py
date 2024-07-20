@@ -18,12 +18,6 @@ requests_log.setLevel(log_level)
 requests_log.propagate = True
 
 
-USERNAME_KEYS: list = ['username', 'user_name', 'client_id']
-PASSWORD_KEYS: list = ['password', 'passwd', 'client_secret']
-MAX_REDIRECTS: int = 10
-
-
-
 def main(
         client_id: str,
         client_secret: str,
